@@ -1,0 +1,176 @@
+body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+    }
+    .toolbar a {
+      font-size: 30px;
+      font-weight: 800;
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .toolbar a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      background: black;
+    }
+
+    /* 3D Animation Section */
+    .hero-content {
+      position: absolute;
+      z-index: 1;
+    }
+    .hero-header {
+      font-size: 60px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .hero-text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    /* About Section */
+    #about {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #dc3545;
+      color: white;
+    }
+    #about .about-content {
+      text-align: center;
+    }
+    #about .about-subheader h2 {
+      font-size: 40px;
+      font-weight: 900;
+    }
+    /* Services Section */
+    #services {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #dc3545, #f8f9fa);
+      color: white;
+    }
+    /* Contact Section */
+    #contact {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #28a745, #20c997);
+      color: white;
+    }
+
+    /* Scroll Animation Indicator */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+    }
+    .contact-header {
+      font-size: 30px;
+      font-weight: 900;
+    }
+    /* Social Media Button */
+.social-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #000;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-button:hover {
+  background: #333;
+}
+
+.toggle-icon {
+  font-size: 24px;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons li {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.social-icons li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.social-icons li a:hover {
+  color: #ffd700;
+}
+
+/* Dragging Cursor */
+.social-button:active {
+  cursor: grabbing;
+}
+
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      #hero {
+        flex-direction: column;
+      }
+
+      .hero-content {
+        margin-top: 10%;
+      }
+
+      .scroll-indicator {
+        bottom: 2rem;
+      }
+    }

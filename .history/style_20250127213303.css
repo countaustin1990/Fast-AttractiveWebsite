@@ -1,0 +1,251 @@
+body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+   /* Toolbar */
+.toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.toolbar a {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scaling transition */
+}
+
+.toolbar a:hover {
+  color: #ffd700;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.toolbar a:active {
+  color: #ffa500; /* Slightly different color on click */
+}
+
+/* Add some padding for fixed toolbar */
+body {
+  padding-top: 70px; /* Adjust to match toolbar height */
+}
+
+/* Navbar collapse style */
+.navbar-collapse {
+  background: rgba(0, 0, 0, 0.8); /* Background for mobile collapsed menu */
+  border-radius: 0 0 10px 10px; /* Rounded corners for collapsed menu */
+}
+
+    /* Hero Section */
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      background: black;
+    }
+
+    /* 3D Animation Section */
+    .hero-content {
+      position: absolute;
+      z-index: 1;
+    }
+    .hero-header {
+      font-size: 60px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .hero-text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    /* About Section */
+    #about {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #dc3545;
+      color: white;
+    }
+    #about .about-content {
+      text-align: center;
+    }
+    .about-subheader h2 {
+      font-size: 40px;
+      font-weight: 900;
+    }
+    /* Services Section */
+    #services {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #007bff;
+      color: white;
+    }
+    /* Contact Section */
+    #contact {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #28a745, #20c997);
+      color: white;
+      padding: 20px;
+    }
+
+    /* Scroll Animation Indicator */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+    }
+    .contact-header {
+      font-size: 30px;
+      font-weight: 900;
+    }
+    /* Social Media Button */
+.social-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #000;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-button:hover {
+  background: #333;
+}
+
+.toggle-icon {
+  font-size: 24px;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons li {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.social-icons li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.social-icons li a:hover {
+  color: #ffd700;
+}
+
+/* Dragging Cursor */
+.social-button:active {
+  cursor: grabbing;
+}
+/* Footer */
+.footer {
+  background: #212529; /* Darker background for premium look */
+}
+
+.footer a {
+  transition: color 0.3s ease; /* Smooth transition for links */
+}
+
+.footer a:hover {
+  color: #ffd700; /* Gold hover effect */
+}
+
+.footer h6, .footer h5 {
+  color: #ffd700; /* Accent color for headings */
+}
+
+.footer p {
+  font-size: 0.9rem; /* Slightly smaller font for compact design */
+}
+
+.footer .list-unstyled li {
+  margin-bottom: 0.5rem; /* Spacing between links */
+}
+
+.footer .text-center {
+  font-size: 0.85rem; /* Compact text size */
+}
+
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+  }
+
+  .hero-content {
+    margin-top: 10%; /* Space from the top */
+    padding: 0 1rem; /* Add padding for better spacing on small screens */
+  }
+
+  .scroll-indicator {
+    bottom: 2rem; /* Adjust position */
+    font-size: 0.9rem; /* Reduce size for better fit */
+  }
+
+  /* Navbar adjustments */
+  .navbar-nav {
+    text-align: center; /* Center-align navigation links */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0.5rem; /* Add spacing between nav items */
+  }
+
+  /* Footer adjustments */
+  .footer .col-md-3,
+  .footer .col-md-2 {
+    text-align: center; /* Center footer content */
+    margin-bottom: 1rem; /* Add spacing between sections */
+  }
+
+  .footer p, 
+  .footer a {
+    font-size: 0.85rem; /* Adjust font size for readability */
+  }
+}
